@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabbir Rahman | Extra</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Sabbir</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./stage.html">Stage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Extra</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== HERO EXTRA ====== -->
+    <section class="extra-hero">
+        <div class="container fade-up">
+            <h1>Extra</h1>
+            <p class="sottotitolo" style="color: rgba(255,255,255,0.7);">Altre cose su di me</p>
+        </div>
+    </section>
+
+    <!-- ====== CALCOLATORE PRESENZE ====== -->
+    <!-- Questo è un piccolo tool per calcolare la percentuale di presenze -->
+    <section class="extra-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="presenze-card fade-up">
+                        <h5 style="margin-bottom: 1rem; font-family: 'Sora', sans-serif;">Calcolatore Presenze</h5>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                            Inserisci il numero di giorni di assenza per calcolare la percentuale di presenze.
+                        </p>
+
+                        <div class="d-flex align-items-end gap-3 mb-3">
+                            <div>
+                                <label for="progresso">Giorni di assenza</label>
+                                <input type="number" id="progresso" min="0" value="0">
+                            </div>
+                            <button class="btn-calcola" onclick="assenze()">Calcola</button>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar" id="barra" role="progressbar" style="width: 100%"></div>
+                        </div>
+                        <p id="percentuale-text" style="color: var(--text-light); font-size: 0.85rem; margin-top: 0.5rem;">
+                            Presenze: 100%
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SEZIONE LIBERA ====== -->
+    <!-- Aggiungi qui qualsiasi contenuto extra: progetti, hobby, gallery, ecc. -->
+    <section class="extra-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center fade-up">
+                    <p class="bio-label">Spazio libero</p>
+                    <h2 class="section-title mb-3">Aggiungi quello che vuoi</h2>
+                    <p class="bio-text mx-auto" style="max-width: 600px;">
+                        Questa sezione è tua: puoi aggiungere una gallery di progetti, 
+                        certificazioni ottenute, una playlist preferita, una raccolta di link utili 
+                        o qualsiasi cosa ti rappresenti.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon-sm" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+                        <b>Indirizzo:</b> Via Palmanova, 51, Milano
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon-sm" viewBox="0 0 16 16"><path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0"/></svg>
+                        <b>Telefono:</b> +39 388 403 1443
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon-sm" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/></svg>
+                        <b>E-mail:</b> sabbir.rahman@immaginazioneelavoro.it
+                    </p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <img src="../img/logo.webp" class="footer-logo" alt="Logo scuola">
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <p class="footer-copy text-center">© 2026 Sabbir Rahman · Immaginazione e Lavoro</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

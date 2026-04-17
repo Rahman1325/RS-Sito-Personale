@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabbir Rahman | Stage</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Sabbir</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Stage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./extra.html">Extra</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== INTRO STAGE ====== -->
+    <section class="stage-intro">
+        <div class="container fade-up">
+            <h1>Esperienza di Stage</h1>
+            <p>
+                Lo stage curriculare è un'esperienza formativa prevista all'interno del percorso di studi, 
+                pensata per mettere in pratica le conoscenze teoriche apprese a scuola e acquisire 
+                competenze professionali reali.
+            </p>
+        </div>
+    </section>
+
+    <!-- ====== CONTENUTO STAGE ====== -->
+    <!-- Duplica un accordion-item per aggiungere un altro stage -->
+    <section class="stage-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="accordionStage">
+
+                        <!-- Stage 1 -->
+                        <div class="accordion-item fade-up">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#stage1" aria-expanded="true">
+                                    Prestige Group Srl
+                                </button>
+                            </h2>
+                            <div id="stage1" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <div class="row g-4">
+                                        <div class="col-md-5">
+                                            <div class="stage-map">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.1806644297835!2d9.271630276173406!3d45.48630653196361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c62d986f62eb%3A0xa89ce23527aa8575!2sPrestige%20Group%20Srl!5e0!3m2!1sit!2sit!4v1763026116527!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <p class="bio-label">Marzo 2024 - Maggio 2024</p>
+                                            <h5>Relazione Stage</h5>
+                                            <p class="stage-relazione">
+                                                Scrivi qui la relazione del tuo stage. Descrivi l'azienda, 
+                                                le attività che hai svolto, le competenze acquisite e 
+                                                le tue impressioni sull'esperienza.
+                                            </p>
+                                            <p class="stage-relazione">
+                                                Attività principali: riparazione hardware, gestione punto vendita, 
+                                                installazione software.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 2 - Duplica questo blocco per altri stage -->
+                        <div class="accordion-item fade-up fade-up-delay-1">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stage2" aria-expanded="false">
+                                    Nome altro posto stage
+                                </button>
+                            </h2>
+                            <div id="stage2" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <div class="row g-4">
+                                        <div class="col-md-5">
+                                            <div class="stage-map">
+                                                <!-- SOSTITUISCI con l'embed di Google Maps del tuo stage -->
+                                                <iframe src="about:blank" allowfullscreen="" loading="lazy"></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <p class="bio-label">Mese anno - Mese anno</p>
+                                            <h5>Relazione Stage</h5>
+                                            <p class="stage-relazione">
+                                                Scrivi qui la relazione del tuo secondo stage.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon-sm" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+                        <b>Indirizzo:</b> Via Palmanova, 51, Milano
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon-sm" viewBox="0 0 16 16"><path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0"/></svg>
+                        <b>Telefono:</b> +39 388 403 1443
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon-sm" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/></svg>
+                        <b>E-mail:</b> sabbir.rahman@immaginazioneelavoro.it
+                    </p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <img src="../img/logo.webp" class="footer-logo" alt="Logo scuola">
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <p class="footer-copy text-center">© 2026 Sabbir Rahman · Immaginazione e Lavoro</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

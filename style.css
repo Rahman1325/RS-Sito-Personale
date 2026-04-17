@@ -1,0 +1,585 @@
+/* ============================================
+   TEMPLATE SITO PERSONALE - ESAME TRIENNALE
+   ============================================
+   
+   COME PERSONALIZZARE:
+   1. Cambia i colori qui sotto (--primary, --accent, ecc.)
+   2. Cambia il font su Google Fonts e aggiorna il link nell'HTML
+   3. Sostituisci le immagini nella cartella /img
+   4. Modifica i testi direttamente nell'HTML
+   
+   ============================================ */
+
+/* === VARIABILI COLORE - MODIFICA QUESTI PER PERSONALIZZARE === */
+:root {
+    --primary: #1a1a2e;       /* Colore principale (scuro) */
+    --secondary: #16213e;     /* Colore secondario */
+    --accent: #e94560;        /* Colore di accento (bottoni, dettagli) */
+    --accent-hover: #c73652;  /* Accento al passaggio del mouse */
+    --light: #f8f9fc;         /* Sfondo chiaro */
+    --text: #2d2d3a;          /* Colore del testo */
+    --text-light: #6c6c80;    /* Testo secondario */
+    --card-bg: #ffffff;
+    --footer-bg: var(--primary);
+    --footer-text: #ccd0d9;
+    --border-radius: 12px;
+}
+
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background-color: var(--light);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* === NAVBAR === */
+.navbar {
+    background-color: #fff !important;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--primary) !important;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-light) !important;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent) !important;
+    background-color: rgba(233, 69, 96, 0.08);
+}
+
+.navbar-icon {
+    color: var(--accent);
+    width: 24px;
+    height: 24px;
+}
+
+/* === HERO / BENVENUTO === */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 85vh;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cerchio decorativo sullo sfondo - puoi rimuoverlo se non ti piace */
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: rgba(233, 69, 96, 0.1);
+    top: -100px;
+    right: -100px;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(233, 69, 96, 0.08);
+    bottom: -50px;
+    left: -50px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.hero .sottotitolo {
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.7);
+    font-weight: 400;
+}
+
+.hero .badge-hero {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--accent);
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* === SEZIONE BIO === */
+.bio-section {
+    padding: 6rem 0;
+}
+
+.bio-section .bio-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.bio-section .bio-text {
+    font-size: 1.15rem;
+    color: var(--text-light);
+    line-height: 1.9;
+    max-width: 600px;
+}
+
+/* Foto profilo nella bio - sostituisci con la tua foto */
+.bio-img-wrapper {
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.bio-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* === SEZIONE PASSIONI === */
+.passioni-section {
+    padding: 6rem 0;
+    background-color: #fff;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+}
+
+/* Card Passioni */
+.passion-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.passion-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.passion-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.passion-card .card-body {
+    padding: 1.5rem;
+}
+
+.passion-card .card-body h5 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.passion-card .card-body p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.passion-card .badge-cat {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background-color: rgba(233, 69, 96, 0.1);
+    color: var(--accent);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+/* === SEZIONE CV === */
+.cv-section {
+    padding: 6rem 0;
+}
+
+.cv-paper {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+}
+
+.cv-paper h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.cv-paper .cv-ruolo {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.cv-paper hr {
+    border-color: rgba(0,0,0,0.08);
+    margin: 1.5rem 0;
+}
+
+.cv-paper h4 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.cv-entry {
+    margin-bottom: 1.5rem;
+}
+
+.cv-entry .cv-title {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.cv-entry .cv-place {
+    color: var(--text-light);
+}
+
+.cv-entry .cv-date {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.cv-entry .cv-desc {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-top: 0.3rem;
+}
+
+/* Lingue nel CV */
+.lingua-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.lingua-item:last-child {
+    border-bottom: none;
+}
+
+/* Bottone scarica CV */
+.btn-accent {
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-hover);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(233, 69, 96, 0.3);
+}
+
+/* === PAGINA STAGE === */
+.stage-intro {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: #fff;
+    text-align: center;
+}
+
+.stage-intro h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.stage-intro p {
+    color: rgba(255,255,255,0.75);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.stage-content {
+    padding: 4rem 0;
+}
+
+/* Accordion stage personalizzato */
+.accordion-item {
+    border: 1px solid rgba(0,0,0,0.06) !important;
+    border-radius: var(--border-radius) !important;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1.2rem 1.5rem;
+    color: var(--primary) !important;
+    background-color: #fff !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(233, 69, 96, 0.04) !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.accordion-button::after {
+    filter: none;
+}
+
+.accordion-body {
+    padding: 1.5rem;
+}
+
+.stage-map iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+.stage-relazione {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* === PAGINA EXTRA === */
+.extra-hero {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: #fff;
+    text-align: center;
+}
+
+.extra-hero h1 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.extra-section {
+    padding: 4rem 0;
+}
+
+/* Barra presenze */
+.presenze-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.presenze-card label {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.presenze-card input[type="number"] {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    width: 120px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.presenze-card input[type="number"]:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.1);
+}
+
+.presenze-card .btn-calcola {
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.presenze-card .btn-calcola:hover {
+    background-color: var(--accent-hover);
+}
+
+.progress {
+    height: 12px;
+    border-radius: 50px;
+    background-color: rgba(0,0,0,0.06);
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    background-color: var(--accent);
+    border-radius: 50px;
+    transition: width 0.6s ease;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 3rem 0;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+footer b {
+    color: #fff;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer .footer-logo {
+    max-width: 120px;
+    opacity: 0.8;
+}
+
+footer .footer-divider {
+    border-color: rgba(255,255,255,0.1);
+    margin: 1.5rem 0;
+}
+
+footer .footer-copy {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+}
+
+/* === UTILITIES === */
+.icon-sm {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    vertical-align: -2px;
+}
+
+/* === ANIMAZIONI SEMPLICI === */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-up-delay-3 { animation-delay: 0.3s; opacity: 0; }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .cv-paper {
+        padding: 2rem 1.5rem;
+    }
+    
+    .bio-img-wrapper {
+        max-width: 250px;
+        margin: 0 auto 2rem;
+    }
+    
+    footer .row > div {
+        margin-bottom: 1.5rem;
+    }
+}
