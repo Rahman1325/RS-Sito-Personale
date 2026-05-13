@@ -871,7 +871,7 @@ img {
 
 .stage-card.open .stage-card-body {
     padding: 2rem;
-    max-height: 800px;
+    max-height: 1500px;
 }
 
 .stage-grid {
@@ -1240,4 +1240,8 @@ img {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+.image-content img {
+  max-width: 300px; /* আপনার প্রয়োজনমতো সাইজ দিন */
+  height: auto;
 }
