@@ -884,8 +884,12 @@ img {
 .stage-map-frame {
     border-radius: var(--radius-md);
     overflow: hidden;
-    width: 100%;
-    height: 300px;
+  
+}
+
+.mappa {
+    height: 300px !important;
+    border-radius: var(--radius-md);
 }
 
 .stage-map-frame iframe {
